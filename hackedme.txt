@@ -1,0 +1,11 @@
+with open("hackme.txt", "r") as file:
+    # Read all the lines from the file
+    content = file.readlines()
+
+# Print the initial message
+print("Here is someone to hack - information")
+
+# Print the contents from the file
+for line in content:
+    print(line.strip())
+      
