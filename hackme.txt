@@ -1,0 +1,12 @@
+name = input("What's your name? ")
+favorite_color = input("What's your favorite color? ")
+first_pet = input("What was the name of your first pet? ")
+mothers_maiden_name = input("What's your mom's maiden name? ")
+elementary_school = input("Which elementary school did you go to? ")
+
+with open("hackme.txt", "w") as file:
+    file.write(f"Name: {name}\n")
+    file.write(f"Favorite Color: {favorite_color}\n")
+    file.write(f"First Pet's Name: {first_pet}\n")
+    file.write(f"Mom's Maiden Name: {mothers_maiden_name}\n")
+    file.write(f"Elementary School: {elementary_school}\n")
