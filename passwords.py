@@ -3,11 +3,11 @@ import os
 
 MIN_FOUND = 10
 
-# Change these only if your files have different names
+
 SHADOW_FILE = "shadow"
 WORDLIST_FILE = "10-million-password-list-top-1000000.txt"
 
-# If the exact wordlist name is different, this tries to find a text wordlist
+
 if not os.path.exists(WORDLIST_FILE):
     possible_lists = [
         "passwords.txt",
@@ -22,7 +22,7 @@ if not os.path.exists(WORDLIST_FILE):
             WORDLIST_FILE = name
             break
 
-# Check required files
+
 if not os.path.exists(SHADOW_FILE):
     print("ERROR: shadow file not found.")
     print("Make sure the shadow file is in the same folder as this script.")
@@ -34,7 +34,7 @@ if not os.path.exists(WORDLIST_FILE):
     print("Then update WORDLIST_FILE with the exact file name.")
     exit()
 
-# Read usernames and hashes from shadow file
+
 hashes = {}
 
 with open(SHADOW_FILE, "r", errors="ignore") as file:
@@ -52,7 +52,7 @@ print(f"Using password list: {WORDLIST_FILE}")
 
 found = {}
 
-# Try each password against each hash
+
 with open(WORDLIST_FILE, "r", errors="ignore") as file:
     for password in file:
         password = password.strip()
